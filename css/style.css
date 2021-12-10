@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.list {
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #f1c1d2;
+  text-align: left;
+  padding: 8px;
+}
+td:first-child {
+  background-color: #fce4ec;
+}
+#fullNameValidationError {
+  font-size: small;
+  font-weight: 400;
+  color: #f50057;
+}
+
+table.list thead > tr {
+  background-color: #f1c1d2;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ff80ab;
+  font-weight: 500;
+}
+
+a {
+  margin-right: 3px;
+  padding: 3px 3px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: greenyellow;
+  font-size: small;
+  cursor: pointer;
+}
+a:last-child {
+  background-color: rgb(250, 195, 77);
+}

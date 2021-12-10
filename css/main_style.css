@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+/*
+#3CA957 : top 색
+#7CB342 : 노란끼 섞인 초록
+#009D6D : 하늘색 섞인 초록
+#607746 : 늪지대색
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.container {
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*top shape-css*/
+.custom-shape-divider-top-1636221930 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3;
+}
+
+.custom-shape-divider-top-1636221930 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 220px;
+  animation: squid 1 linear 1s;
+}
+
+.custom-shape-divider-top-1636221930 .shape-fill {
+  fill: #7cb342;
+}
+
+@keyframes squid {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 220px;
+  }
+}
+
+/*사이드바*/
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  right: 0;
+  height: 100vh;
+  box-sizing: initial;
+  border-left: 7px solid
+    linear-gradient(
+      180deg,
+      rgba(55, 138, 49, 1) 0%,
+      rgba(122, 230, 105, 1) 41%,
+      rgba(246, 245, 158, 1) 100%
+    );
+  background: rgb(55, 138, 49);
+  background: linear-gradient(
+    180deg,
+    rgba(55, 138, 49, 1) 0%,
+    rgba(122, 230, 105, 1) 41%,
+    rgba(246, 245, 158, 1) 100%
+  );
+  transition: 0.3s;
+  overflow-x: hidden;
+}
+.sidebar.active {
+  width: 200px;
+}
+.sidebar ul {
+  position: absolute;
+  top: 32vh;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+}
+
+.sidebar ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.sidebar ul li.active {
+  background: #fff;
+}
+
+.sidebar ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #fff;
+  overflow: hidden;
+}
+.sidebar ul li.active a {
+  color: #424242;
+}
+
+.sidebar ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+.sidebar ul li a .icon i {
+  font-size: 1.5em;
+}
+.sidebar ul li a .listName {
+  position: relative;
+  display: block;
+  padding-right: 10px;
+  height: 60px;
+  line-height: 65px;
+  white-space: normal;
+}
+
+.toggle {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  margin-top: 30vh;
+  z-index: 5;
+  background: #7cb342;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle.active {
+  background: #bdbdbd;
+}
+.toggle i {
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  z-index: 5;
+  display: none;
+}
+
+.toggle i#open,
+.toggle.active i#close {
+  display: block;
+}
+
+.toggle i#close,
+.toggle.active i#open {
+  display: none;
+}
+
+/*메인화면 꾸미기*/
+.spintaei {
+  position: fixed;
+  top: 408px;
+  width: 200px;
+  height: 200px;
+  animation: moving ease-out 3s both;
+  animation-delay: 1.2s;
+}
+.spintaei img {
+  width: 100%;
+  height: 100%;
+  animation: bounce 4 linear 1s;
+  animation-delay: 1.2s;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(23px);
+  }
+}
+
+@keyframes moving {
+  0% {
+    left: -13vw;
+  }
+  100% {
+    left: 18vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .custom-shape-divider-top-1636221930 svg {
+    height: 120px;
+  }
+  .spintaei {
+    display: none;
+  }
+}
